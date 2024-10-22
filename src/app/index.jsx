@@ -1,7 +1,6 @@
 
 import { router } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Pressable, Button } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Button, Image, SafeAreaView, StatusBar } from 'react-native';
 
 export default function App() {
 
@@ -9,13 +8,18 @@ export default function App() {
     router.replace("/home")
   }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      {/* <StatusBar style="auto" /> */}
+    <SafeAreaView style={styles.container}>
+      <Image style={styles.image} source={{
+        uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1024px-Palmeiras_logo.svg.png',
+
+      }} 
+      resizeMode='cover'
+      />
+      <Text style={styles.text}>Bem-vindo a loja do Palmeiras</Text>
       <Pressable onPress={handleClick} style={styles.button}>
         <Text style={styles.txt}>Comprar agora</Text>
       </Pressable>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -25,6 +29,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 8,
+    gap: 10,
+    marginTop: StatusBar.currentHeight || 0
   },
   button: {
     backgroundColor: '#29f052',
@@ -33,6 +40,15 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     marginTop: 10,
     borderRadius: 6
+  },
+  image: {
+    width: 240,
+    height: 240,
+
+  },
+  text: {
+    fontSize: 25,
+    textAlign: 'center'
   },
   txt: {
     color: 'white',

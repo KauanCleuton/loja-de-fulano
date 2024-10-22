@@ -12,7 +12,7 @@ export default function TabsLayout() {
                 title: 'Home',
                 tabBarIcon: ({color}) => <FontAwesome name="home" size={22} color={color} />
             }} />
-             <Tabs.Screen name="categories" options={{
+             <Tabs.Screen name="(categorias)" options={{
                 title: 'Categorias',
                 tabBarIcon: ({color}) => <FontAwesome name="list" size={22} color={color} />
             }} />
