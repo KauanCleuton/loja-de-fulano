@@ -1,6 +1,9 @@
+import { router } from "expo-router";
 import { Image, StyleSheet, View, Text, Pressable } from "react-native";
 
-const ProductCard = ({ item, visible }) => {
+const ProductCard = ({ item }) => {
+
+ 
   return (
     <View style={styles.main}>
       <Image
@@ -13,11 +16,6 @@ const ProductCard = ({ item, visible }) => {
       <View style={styles.content}>
         <Text style={styles.name}>{item.name}</Text>
         <Text style={styles.price}>Preço: ${item.price}</Text>
-        {visible && (
-          <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Adicionar ao carrinho</Text>
-          </Pressable>
-        )}
       </View>
     </View>
   );
@@ -36,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    width: 120,
+    width: 140,
     height: 120,
     borderRadius: 10,
   },
@@ -51,7 +49,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: 14,
-    color: "#28a745",
+    color: "#09347f",
     marginTop: 5,
   },
   type: {
@@ -60,10 +58,10 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    marginTop: 10,
+    marginTop: 15,
     paddingVertical: 8,
     paddingHorizontal: 15,
-    backgroundColor: "#29f052",
+    backgroundColor: "#09347f",
     borderRadius: 6,
     alignItems: "center",
   },

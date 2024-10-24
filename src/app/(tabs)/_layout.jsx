@@ -10,9 +10,10 @@ export default function TabsLayout() {
             headerTitleAlign: 'center',
             tabBarStyle: {
                 backgroundColor: "#09347f",
-            }
+            },
+            
         }}>
-            <Tabs.Screen name="home" options={{
+            <Tabs.Screen name="(main)" options={{
                 title: 'Home',
                 tabBarIcon: ({color}) => <FontAwesome name="home" size={22} color={color} />
             }} />

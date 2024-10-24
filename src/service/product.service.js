@@ -1,13 +1,13 @@
 import { dataProducts } from "../utils/data";
 
-
 class ProductService {
     filterProductsByCategory(type) {
-        return dataProducts.filter((item) => item.type === type)
+        return dataProducts.filter((item) => item.type === type);
     }
+    
     filterProductsById(id) {
-        return dataProducts.filter((item) => item.id === id)
+        return dataProducts.find((item) => item.id === Number(id)); 
     }
 }
 
-export default ProductService
+export default ProductService;
