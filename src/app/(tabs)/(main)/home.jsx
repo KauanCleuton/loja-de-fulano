@@ -8,7 +8,7 @@ export default function App() {
             <SafeAreaView style={styles.container}>
                 <FlatList 
                     data={dataProducts}
-                    keyExtractor={item => item.id.toString()}  // Garantir que o ID é uma string
+                    keyExtractor={item => item.id.toString()} 
                     renderItem={({ item }) => <ProductCard item={item} />}
                     contentContainerStyle={styles.content}
                 />
@@ -20,12 +20,12 @@ export default function App() {
 const styles = StyleSheet.create({
     wrapper: {
         flex: 1,
-        backgroundColor: '#f5f5f5',  // Você pode alterar para a cor de fundo desejada
+        backgroundColor: '#fff',
     },
     container: {
         width: '100%',
         height: '100%',
-        marginTop: StatusBar.currentHeight || 0,  // Considerar o StatusBar
+        marginTop: StatusBar.currentHeight || 0, 
         flex: 1,
     },
     content: {

@@ -15,13 +15,11 @@ const BackgroundCard = ({ item }) => {
         <View style={styles.container}>
             <Pressable onPress={() => handlePushDinamic(item.type)}>
                 <View style={styles.imageContainer}>
-                    {/* Imagem com opacidade */}
                     <Image
                         source={{ uri: item.image }}
                         style={styles.image}
                         resizeMode="cover"
                     />
-                    {/* Texto sobreposto à imagem */}
                     <View style={styles.content}>
                         <Text style={styles.text}>{item.name}</Text>
                     </View>
@@ -41,7 +39,7 @@ const styles = StyleSheet.create({
     imageContainer: {
         position: 'relative',
         width: '100%',
-        height: 190, // Altura ajustável conforme necessário
+        height: 190, 
         borderRadius: 10,
         overflow: 'hidden',
     },
@@ -58,7 +56,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.3)', // Fundo sobreposto para contraste
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
     },
     text: {
         color: 'white',

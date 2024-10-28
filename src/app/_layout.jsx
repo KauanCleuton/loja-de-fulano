@@ -13,7 +13,7 @@ export default function RootLayout() {
             headerStyle:{
                 backgroundColor: '#09347f'
             },
-            headerTintColor: "#FFF"
+            headerTintColor: "#FFF",
         }}>
             <Stack.Screen name="index"  />
             <Stack.Screen name="(tabs)" />
